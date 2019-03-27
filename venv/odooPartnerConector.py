@@ -20,28 +20,3 @@ class odooPartnerConector(odooApiConector):
 
     def searchReadActiveCustomers(self):
         return self.searchRead( [[['active', '=', True], ['customer', '=', True]]], {'fields': ['name', 'country_id', 'comment'], 'limit': 5} )
-
-
-# Codigo de ejemplo------------------------------------------------------------
-
-odooApiConector          = odooPartnerConector()
-
-odooApiConector.database = 'wathcdog'
-odooApiConector.host     = '18.194.232.134'
-odooApiConector.user     = 'mcalero@gestool.es'
-odooApiConector.password = 'odoo'
-
-print( odooApiConector.model )
-print( odooApiConector.isAccessRights() )
-print( odooApiConector.searchActiveCustomers() )
-print( odooApiConector.searchCountActiveCustomers() )
-print( odooApiConector.fieldsGet() )
-print( odooApiConector.read( odooApiConector.firstActiveCustomers() ) )
-print( odooApiConector.searchReadActiveCustomers() )
-
-id = odooApiConector.create( [ {'name': "New Partner", } ] )
-odooApiConector.writeById( id, { 'name': "Newer partner" } )
-odooApiConector.unlink( [id] )
-
-
-

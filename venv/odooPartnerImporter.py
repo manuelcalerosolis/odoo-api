@@ -25,7 +25,7 @@ class odooPartnerImporter():
 
             self.odooCsvReader.close_file()
 
-# Iniciamos la clase
+# Iniciamos la clase --------------------------------------------------
 
 odooPartnerImporter().run()
 

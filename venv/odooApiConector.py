@@ -109,5 +109,3 @@ class odooApiConector:
 
     def unlink(self, ids):
         return self.execute_kw_object_end_point( 'unlink', ids )
-
-# Codigo de ejemplo------------------------------------------------------------
