@@ -50,3 +50,5 @@ class odooCsvReader():
 
     def get_first_line(self):
         return ( next( self.csv_reader() ) )
+
+#pruebaComentario
